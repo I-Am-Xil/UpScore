@@ -35,7 +35,7 @@ app.register_blueprint(auth)
 
 @app.errorhandler(401)
 def unauthorized(e):
-    return redirect(url_for("start.Index"))
+    return redirect(url_for("start.index"))
 
 @app.route("/test401")
 def Test401():
@@ -44,7 +44,7 @@ def Test401():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return redirect(url_for("start.Index"))
+    return redirect(url_for("start.index"))
 
 @app.route("/test404")
 def Test404():
