@@ -20,12 +20,12 @@ make
 ```
 
 
-### Deploy
+### Deploy Server
 
 
 To run the local server
 
 ```
-flask --app UpScore run
+make run
 ```
 
