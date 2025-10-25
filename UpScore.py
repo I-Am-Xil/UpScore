@@ -1,60 +1,57 @@
-from flask import Flask, render_template, redirect, url_for, abort, request, make_response
+from flask import Flask, render_template, redirect, url_for,  make_response, abort
 from flask_login import LoginManager, login_required
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+
+db = SQLAlchemy()
+from models import User
+
 secret_key_file = open("./key.secret", "r")
-app.secret_key = secret_key_file.read()
+app.config["SECRET_KEY"] = secret_key_file.read()
 secret_key_file.close()
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db.init_app(app)
+
 login_manager = LoginManager()
+login_manager.login_view = "/login"
 login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.get(user_id)
+    return User.query.get(int(user_id))
 
 
+from start import start
+app.register_blueprint(start)
 
-@app.route("/")
-def Index():
-    return render_template("index.html")
-
-@app.route("/login", methods = ["GET", "POST"])
-def Login():
-    form = LoginForm()
-    return render_template("login.html")
-
-
-@app.route("/home")
-@login_required
-def Home():
-    """
-    resp = make_response(f"Hello, {}")
-    resp.set_cookie("username", )
-    return resp 
-    """
-    return "Home"
+from auth import auth
+app.register_blueprint(auth)
 
 
 @app.errorhandler(401)
 def unauthorized(e):
-    return redirect(url_for("Login"))
+    return redirect(url_for("start.Index"))
 
-@app.route("/Test401")
+@app.route("/test401")
 def Test401():
     abort(401)
-    return render_template("index.html")
 
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return redirect(url_for("Index"))
+    return redirect(url_for("start.Index"))
 
-@app.route("/Test404")
+@app.route("/test404")
 def Test404():
     abort(404)
-    return render_template("index.html")
 
 
+
+with app.app_context():
+    db.create_all()
+    print("Base de datos creada.")
