@@ -1,0 +1,10 @@
+_id_x,type,nickname,rewards,balance,account_number,customer_id,_id_y,first_name,last_name,address.street_number,address.street_name,address.city,address.state,address.zip
+68fc98d29683f20dd51a42f8,Savings,Bank of Nessie,0,9000,5293160215703676,68fc8f749683f20dd51a42cb,68fc8f749683f20dd51a42cb,John,Doe,6785,Vernon St,Ontario,CA,91762
+68fc9a609683f20dd51a4304,Credit Card,SNOOPY BANK,750,4500,5175455340605348,68fc8f749683f20dd51a42cb,68fc8f749683f20dd51a42cb,John,Doe,6785,Vernon St,Ontario,CA,91762
+68fc9abd9683f20dd51a4305,Credit Card,SNOOPY BANK,750,9000,5428027465103030,68fc91079683f20dd51a42d1,68fc91079683f20dd51a42d1,Peter,Parker,20,Ingram Street,New York,NY,11375
+68fc9b229683f20dd51a4306,Savings,Bank Of Nessie,0,2000,5261940554034868,68fc91079683f20dd51a42d1,68fc91079683f20dd51a42d1,Peter,Parker,20,Ingram Street,New York,NY,11375
+68fc9c9d9683f20dd51a430a,Credit Card,SNOOPY BANK,0,7000,5197289002417872,68fc94059683f20dd51a42e1,68fc94059683f20dd51a42e1,Hermione,Granger,8,Heathgate St,Hampstead Garden,NY,3036
+68fce1d49683f20dd51a4414,Savings,Bank Of Nessie,0,27000,5192754904387940,68fc958a9683f20dd51a42e5,68fc958a9683f20dd51a42e5,Mary,Sue,3037,Daffodil Lane,Springfiel,VA,22161
+68fcf98d9683f20dd51a4627,Savings,Bank Of Nessie,0,56737,5119612053135967,68fc94059683f20dd51a42e1,68fc94059683f20dd51a42e1,Hermione,Granger,8,Heathgate St,Hampstead Garden,NY,3036
+68fd0da69683f20dd51a469b,Savings,SNOOPY BANK,2750,32780,5492863942405965,68fc958a9683f20dd51a42e5,68fc958a9683f20dd51a42e5,Mary,Sue,3037,Daffodil Lane,Springfiel,VA,22161
+68fd0f239683f20dd51a46a3,Savings,TEST BANK,0,995000,9999999999999999,68fd0eb79683f20dd51a469f,68fd0eb79683f20dd51a469f,TEST,ONE,9999,TEST STREET,TEST CITY,TC,99999
