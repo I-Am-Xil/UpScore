@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, redirect, url_for, abort
+from flask import render_template, redirect, url_for, abort, request, make_response
 
 app = Flask(__name__)
 
@@ -10,12 +10,16 @@ def Index():
 
 @app.route("/login")
 def Login():
+    username = request.cookies.get("username")
+    if username:
+        return username
     return render_template("login.html")
 
-@app.route("/home")
-def Home():
-    return render_template("login.html")
-
+@app.route("/home/<username>")
+def Home(username):
+    resp = make_response(f"Hello, {username}")
+    resp.set_cookie("username", username)
+    return resp 
 
 
 
@@ -34,7 +38,7 @@ def page_not_found(e):
     return redirect(url_for("Index"))
 
 @app.route("/Test404")
-def Test401():
+def Test404():
     abort(404)
     return render_template("index.html")
 
