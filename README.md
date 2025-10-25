@@ -5,7 +5,7 @@
 arch
 
 ```
-sudo pacman -S python-flask python-flask-login make
+sudo pacman -S make python-flask python-flask-login python-flask-sqlalchemy
 ```
 
 
