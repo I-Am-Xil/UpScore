@@ -1,7 +1,10 @@
-from flask import Flask
-from flask import render_template, redirect, url_for, abort, request, make_response
+from flask import Flask, render_template, redirect, url_for, abort, request, make_response
+from flask_login import LoginManager
 
 app = Flask(__name__)
+
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 
 @app.route("/")

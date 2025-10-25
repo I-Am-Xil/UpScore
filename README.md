@@ -1,6 +1,31 @@
 # UpScore
 
-How to run the local server:
-'''
+### Requirements
+
+arch
+
+```
+sudo pacman -S python-flask python-flask-login make
+```
+
+
+### Installation
+
+Clone the repo
+
+```
+git clone https://github.com/I-Am-Xil/UpScore.git
+cd ./UpScore
+make
+```
+
+
+### Deploy
+
+
+To run the local server
+
+```
 flask --app UpScore run
-'''
+```
+
