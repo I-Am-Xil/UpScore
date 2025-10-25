@@ -1,0 +1,1073 @@
+[
+  {
+    "account_id": "68fd29799683f20dd51a4727",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-02",
+        "status": "pending",
+        "amount": 14996,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4727",
+        "_id": "68fd561b9683f20dd51a4933"
+      }
+    }
+  },
+  {
+    "account_id": "68fd29799683f20dd51a4727",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-04",
+        "status": "pending",
+        "amount": 8660,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4727",
+        "_id": "68fd561b9683f20dd51a4934"
+      }
+    }
+  },
+  {
+    "account_id": "68fd29799683f20dd51a4727",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-05",
+        "status": "pending",
+        "amount": 15392,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4727",
+        "_id": "68fd561c9683f20dd51a4935"
+      }
+    }
+  },
+  {
+    "account_id": "68fd29799683f20dd51a4727",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-08-27",
+        "status": "pending",
+        "amount": 17293,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4727",
+        "_id": "68fd561c9683f20dd51a4936"
+      }
+    }
+  },
+  {
+    "account_id": "68fd29799683f20dd51a4729",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-24",
+        "status": "pending",
+        "amount": 13614,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4729",
+        "_id": "68fd561c9683f20dd51a4937"
+      }
+    }
+  },
+  {
+    "account_id": "68fd29799683f20dd51a4729",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-25",
+        "status": "pending",
+        "amount": 3275,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4729",
+        "_id": "68fd561c9683f20dd51a4938"
+      }
+    }
+  },
+  {
+    "account_id": "68fd29799683f20dd51a4729",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-06",
+        "status": "pending",
+        "amount": 2062,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4729",
+        "_id": "68fd561c9683f20dd51a4939"
+      }
+    }
+  },
+  {
+    "account_id": "68fd29799683f20dd51a4729",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-03",
+        "status": "pending",
+        "amount": 3778,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd29799683f20dd51a4729",
+        "_id": "68fd561c9683f20dd51a493a"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-15",
+        "status": "pending",
+        "amount": 11008,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472b",
+        "_id": "68fd561d9683f20dd51a493b"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-09",
+        "status": "pending",
+        "amount": 4908,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472b",
+        "_id": "68fd561d9683f20dd51a493c"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-08-27",
+        "status": "pending",
+        "amount": 18395,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472b",
+        "_id": "68fd561d9683f20dd51a493d"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472d",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-10",
+        "status": "pending",
+        "amount": 12154,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472d",
+        "_id": "68fd561d9683f20dd51a493e"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472d",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-30",
+        "status": "pending",
+        "amount": 16755,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472d",
+        "_id": "68fd561d9683f20dd51a493f"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472f",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-30",
+        "status": "pending",
+        "amount": 4008,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472f",
+        "_id": "68fd561d9683f20dd51a4940"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472f",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-20",
+        "status": "pending",
+        "amount": 10356,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472f",
+        "_id": "68fd561e9683f20dd51a4941"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472f",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-19",
+        "status": "pending",
+        "amount": 11913,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472f",
+        "_id": "68fd561e9683f20dd51a4942"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297a9683f20dd51a472f",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-01",
+        "status": "pending",
+        "amount": 12606,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297a9683f20dd51a472f",
+        "_id": "68fd561e9683f20dd51a4943"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4731",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-15",
+        "status": "pending",
+        "amount": 6313,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4731",
+        "_id": "68fd561e9683f20dd51a4944"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4731",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-22",
+        "status": "pending",
+        "amount": 3177,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4731",
+        "_id": "68fd561e9683f20dd51a4945"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4731",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-17",
+        "status": "pending",
+        "amount": 9847,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4731",
+        "_id": "68fd561e9683f20dd51a4946"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4731",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-21",
+        "status": "pending",
+        "amount": 15991,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4731",
+        "_id": "68fd561f9683f20dd51a4947"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4733",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-23",
+        "status": "pending",
+        "amount": 8472,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4733",
+        "_id": "68fd561f9683f20dd51a4948"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4733",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-12",
+        "status": "pending",
+        "amount": 7793,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4733",
+        "_id": "68fd561f9683f20dd51a4949"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4735",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-05",
+        "status": "pending",
+        "amount": 2104,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4735",
+        "_id": "68fd561f9683f20dd51a494a"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4735",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-08-29",
+        "status": "pending",
+        "amount": 8342,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4735",
+        "_id": "68fd561f9683f20dd51a494b"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4735",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-25",
+        "status": "pending",
+        "amount": 1882,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4735",
+        "_id": "68fd561f9683f20dd51a494c"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4737",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-14",
+        "status": "pending",
+        "amount": 19520,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4737",
+        "_id": "68fd561f9683f20dd51a494d"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4737",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-16",
+        "status": "pending",
+        "amount": 2327,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4737",
+        "_id": "68fd56209683f20dd51a494e"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297b9683f20dd51a4737",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-07",
+        "status": "pending",
+        "amount": 2140,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297b9683f20dd51a4737",
+        "_id": "68fd56209683f20dd51a494f"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a4739",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-24",
+        "status": "pending",
+        "amount": 10179,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a4739",
+        "_id": "68fd56209683f20dd51a4950"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a4739",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-12",
+        "status": "pending",
+        "amount": 16418,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a4739",
+        "_id": "68fd56209683f20dd51a4951"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a4739",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-11",
+        "status": "pending",
+        "amount": 10213,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a4739",
+        "_id": "68fd56209683f20dd51a4952"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a4739",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-17",
+        "status": "pending",
+        "amount": 9430,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a4739",
+        "_id": "68fd56209683f20dd51a4953"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a473b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-22",
+        "status": "pending",
+        "amount": 17825,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a473b",
+        "_id": "68fd56219683f20dd51a4954"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a473b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-23",
+        "status": "pending",
+        "amount": 4312,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a473b",
+        "_id": "68fd56219683f20dd51a4955"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a473b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-08-31",
+        "status": "pending",
+        "amount": 18703,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a473b",
+        "_id": "68fd56219683f20dd51a4956"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a473b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-05",
+        "status": "pending",
+        "amount": 1426,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a473b",
+        "_id": "68fd56219683f20dd51a4957"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a473d",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-22",
+        "status": "pending",
+        "amount": 3399,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a473d",
+        "_id": "68fd56219683f20dd51a4958"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a473d",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-08",
+        "status": "pending",
+        "amount": 13363,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a473d",
+        "_id": "68fd56219683f20dd51a4959"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297c9683f20dd51a473d",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-20",
+        "status": "pending",
+        "amount": 12693,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297c9683f20dd51a473d",
+        "_id": "68fd56229683f20dd51a495a"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a473f",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-13",
+        "status": "pending",
+        "amount": 19901,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a473f",
+        "_id": "68fd56229683f20dd51a495b"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a473f",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-08-28",
+        "status": "pending",
+        "amount": 17133,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a473f",
+        "_id": "68fd56229683f20dd51a495c"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a473f",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-21",
+        "status": "pending",
+        "amount": 11515,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a473f",
+        "_id": "68fd56229683f20dd51a495d"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4741",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-13",
+        "status": "pending",
+        "amount": 2522,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4741",
+        "_id": "68fd56229683f20dd51a495e"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4741",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-01",
+        "status": "pending",
+        "amount": 10271,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4741",
+        "_id": "68fd56229683f20dd51a495f"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4743",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-17",
+        "status": "pending",
+        "amount": 18280,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4743",
+        "_id": "68fd56239683f20dd51a4960"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4743",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-10",
+        "status": "pending",
+        "amount": 17877,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4743",
+        "_id": "68fd56239683f20dd51a4961"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4743",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-04",
+        "status": "pending",
+        "amount": 13121,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4743",
+        "_id": "68fd56239683f20dd51a4962"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4743",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-22",
+        "status": "pending",
+        "amount": 5554,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4743",
+        "_id": "68fd56239683f20dd51a4963"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4745",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-28",
+        "status": "pending",
+        "amount": 11860,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4745",
+        "_id": "68fd56239683f20dd51a4964"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4745",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-26",
+        "status": "pending",
+        "amount": 19380,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4745",
+        "_id": "68fd56239683f20dd51a4965"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4745",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-15",
+        "status": "pending",
+        "amount": 3410,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4745",
+        "_id": "68fd56239683f20dd51a4966"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297d9683f20dd51a4745",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-02",
+        "status": "pending",
+        "amount": 16514,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297d9683f20dd51a4745",
+        "_id": "68fd56249683f20dd51a4967"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4747",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-21",
+        "status": "pending",
+        "amount": 6563,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4747",
+        "_id": "68fd56249683f20dd51a4968"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4747",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-21",
+        "status": "pending",
+        "amount": 14479,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4747",
+        "_id": "68fd56249683f20dd51a4969"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4747",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-23",
+        "status": "pending",
+        "amount": 16045,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4747",
+        "_id": "68fd56249683f20dd51a496a"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4747",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-23",
+        "status": "pending",
+        "amount": 9355,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4747",
+        "_id": "68fd56249683f20dd51a496b"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4749",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-09",
+        "status": "pending",
+        "amount": 9993,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4749",
+        "_id": "68fd56249683f20dd51a496c"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4749",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-21",
+        "status": "pending",
+        "amount": 12383,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4749",
+        "_id": "68fd56259683f20dd51a496d"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4749",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-19",
+        "status": "pending",
+        "amount": 6003,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4749",
+        "_id": "68fd56259683f20dd51a496e"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a4749",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-09-01",
+        "status": "pending",
+        "amount": 19864,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a4749",
+        "_id": "68fd56259683f20dd51a496f"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a474b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-23",
+        "status": "pending",
+        "amount": 16693,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a474b",
+        "_id": "68fd56259683f20dd51a4970"
+      }
+    }
+  },
+  {
+    "account_id": "68fd297e9683f20dd51a474b",
+    "withdrawal": {
+      "message": "Created withdrawal and added it to the account",
+      "code": 201,
+      "objectCreated": {
+        "medium": "balance",
+        "transaction_date": "2025-10-25",
+        "status": "pending",
+        "amount": 11059,
+        "description": "Withdrawal",
+        "type": "withdrawal",
+        "payer_id": "68fd297e9683f20dd51a474b",
+        "_id": "68fd56259683f20dd51a4971"
+      }
+    }
+  }
+]
