@@ -11,4 +11,4 @@ def index():
 @start.route("/home")
 @login_required
 def home():
-    return "Home"
+    return render_template("home.html")
