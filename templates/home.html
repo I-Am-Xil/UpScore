@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo - FinanziPet</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo - FinanziPet</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
         /* Variables de colores y estilos */
         :root {
             --primary: #6c5ce7;
@@ -160,8 +160,8 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
         }
 
         .dropdown-title {
@@ -288,7 +288,7 @@
             margin: 0 auto;
             position: relative;
             box-shadow: 0 10px 30px rgba(108, 92, 231, 0.5), 
-                        inset 0 -10px 20px rgba(0, 0, 0, 0.2);
+                inset 0 -10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .tamagochi-face {
@@ -376,20 +376,20 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
-            100% { transform: translateY(0) rotate(0deg); }
+        0% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(1deg); }
+        100% { transform: translateY(0) rotate(0deg); }
         }
 
         @keyframes blink {
-            0%, 90%, 100% { transform: scaleY(1); }
-            95% { transform: scaleY(0.1); }
+        0%, 90%, 100% { transform: scaleY(1); }
+        95% { transform: scaleY(0.1); }
         }
 
         @keyframes pulse {
-            0% { opacity: 0.8; }
-            50% { opacity: 1; }
-            100% { opacity: 0.8; }
+        0% { opacity: 0.8; }
+        50% { opacity: 1; }
+        100% { opacity: 0.8; }
         }
 
         /* Chat con Tamagochi */
@@ -429,8 +429,8 @@
         }
 
         @keyframes messageAppear {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
         }
 
         .tamagochi-message {
@@ -706,277 +706,277 @@
             .cards-slider {
                 flex-direction: column;
             }
-            
+
             .card {
                 min-width: auto;
             }
-            
+
             .dropdown {
                 width: 280px;
             }
-            
+
             .notification-dropdown {
                 width: 300px;
             }
         }
-    </style>
-</head>
-<body>
-    <!-- Efecto de partículas -->
-    <div id="particles-js"></div>
+        </style>
+    </head>
+    <body>
+        <!-- Efecto de partículas -->
+        <div id="particles-js"></div>
 
-    <!-- Menú de navegación -->
-    <header>
+        <!-- Menú de navegación -->
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-dragon"></i>
+                        FinanziPet
+                    </a>
+                    <div class="nav-right">
+                        <div class="notification-icon" id="notificationIcon">
+                            <i class="fas fa-bell"></i>
+                            <div class="notification-badge">3</div>
+                            <div class="dropdown notification-dropdown">
+                                <div class="dropdown-title">Notificaciones</div>
+                                <div class="notification-item">
+                                    <div class="notification-content">Tu tarjeta de crédito tiene un pago pendiente</div>
+                                    <div class="notification-time">Hace 2 horas</div>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-content">¡Felicidades! Has alcanzado un nuevo logro</div>
+                                    <div class="notification-time">Ayer</div>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-content">Tu FinanziPet ha evolucionado</div>
+                                    <div class="notification-time">Hace 3 días</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-menu" id="userMenu">
+                            <i class="fas fa-user-circle"></i>
+                            <div class="dropdown user-dropdown">
+                                <a href="#"><i class="fas fa-user"></i> Mi Perfil</a>
+                                <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                                <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
+                                <a href="{{ url_for('auth.logout') }}"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
         <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <i class="fas fa-dragon"></i>
-                    FinanziPet
-                </a>
-                <div class="nav-right">
-                    <div class="notification-icon" id="notificationIcon">
-                        <i class="fas fa-bell"></i>
-                        <div class="notification-badge">3</div>
-                        <div class="dropdown notification-dropdown">
-                            <div class="dropdown-title">Notificaciones</div>
-                            <div class="notification-item">
-                                <div class="notification-content">Tu tarjeta de crédito tiene un pago pendiente</div>
-                                <div class="notification-time">Hace 2 horas</div>
+            <div class="main-content">
+                <!-- Panel izquierdo - Tamagochi y Chat -->
+                <div class="left-panel">
+                    <!-- Tarjeta del Tamagochi -->
+                    <div class="tamagochi-card">
+                        <div class="tamagochi-header">
+                            <h2 class="tamagochi-title">Mi FinanziPet</h2>
+                            <div class="health-score">
+                                <div class="score-value">85%</div>
+                                <div class="score-label">Salud Financiera</div>
                             </div>
-                            <div class="notification-item">
-                                <div class="notification-content">¡Felicidades! Has alcanzado un nuevo logro</div>
-                                <div class="notification-time">Ayer</div>
-                            </div>
-                            <div class="notification-item">
-                                <div class="notification-content">Tu FinanziPet ha evolucionado</div>
-                                <div class="notification-time">Hace 3 días</div>
+                        </div>
+                        <div class="tamagochi-container">
+                            <div class="tamagochi-body">
+                                <div class="tamagochi-face">
+                                    <div class="tamagochi-eyes">
+                                        <div class="tamagochi-eye"></div>
+                                        <div class="tamagochi-eye"></div>
+                                    </div>
+                                    <div class="tamagochi-mouth"></div>
+                                </div>
+                                <div class="tamagochi-screen">
+                                    ¡Hola! ¿Cómo estás?
+                                    <div class="health-bar">
+                                        <div class="health-fill"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="user-menu" id="userMenu">
-                        <i class="fas fa-user-circle"></i>
-                        <div class="dropdown user-dropdown">
-                            <a href="#"><i class="fas fa-user"></i> Mi Perfil</a>
-                            <a href="#"><i class="fas fa-cog"></i> Configuración</a>
-                            <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
-                            <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Contenido principal -->
-    <div class="container">
-        <div class="main-content">
-            <!-- Panel izquierdo - Tamagochi y Chat -->
-            <div class="left-panel">
-                <!-- Tarjeta del Tamagochi -->
-                <div class="tamagochi-card">
-                    <div class="tamagochi-header">
-                        <h2 class="tamagochi-title">Mi FinanziPet</h2>
-                        <div class="health-score">
-                            <div class="score-value">85%</div>
-                            <div class="score-label">Salud Financiera</div>
+                    <!-- Chat con el Tamagochi -->
+                    <div class="chat-container">
+                        <h3 class="chat-title">Chat con FinanziPet</h3>
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message tamagochi-message">
+                                <div class="message-sender">FinanziPet</div>
+                                <div class="message-content">¡Hola! Veo que tu salud financiera está en 85%. ¡Buen trabajo!</div>
+                            </div>
+                            <div class="message tamagochi-message">
+                                <div class="message-sender">FinanziPet</div>
+                                <div class="message-content">Recuerda que tienes un pago pendiente en tu tarjeta de crédito. ¿Quieres que te ayude a programarlo?</div>
+                            </div>
+                            <div class="message user-message">
+                                <div class="message-sender">Tú</div>
+                                <div class="message-content">Sí, por favor. ¿Cuándo vence exactamente?</div>
+                            </div>
+                            <div class="message tamagochi-message">
+                                <div class="message-sender">FinanziPet</div>
+                                <div class="message-content">El pago vence en 5 días. Te recomiendo programarlo para mañana para evitar cargos por mora.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tamagochi-container">
-                        <div class="tamagochi-body">
-                            <div class="tamagochi-face">
-                                <div class="tamagochi-eyes">
-                                    <div class="tamagochi-eye"></div>
-                                    <div class="tamagochi-eye"></div>
-                                </div>
-                                <div class="tamagochi-mouth"></div>
-                            </div>
-                            <div class="tamagochi-screen">
-                                ¡Hola! ¿Cómo estás?
-                                <div class="health-bar">
-                                    <div class="health-fill"></div>
-                                </div>
-                            </div>
+                        <div class="chat-input">
+                            <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+                            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chat con el Tamagochi -->
-                <div class="chat-container">
-                    <h3 class="chat-title">Chat con FinanziPet</h3>
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="message tamagochi-message">
-                            <div class="message-sender">FinanziPet</div>
-                            <div class="message-content">¡Hola! Veo que tu salud financiera está en 85%. ¡Buen trabajo!</div>
+                <!-- Panel derecho - Tarjetas e Insignias -->
+                <div class="right-panel">
+                    <!-- Sección de Tarjetas -->
+                    <div class="cards-section">
+                        <h3 class="section-title">Mis Tarjetas</h3>
+                        <div class="cards-tabs">
+                            <div class="tab active" data-tab="credit">Tarjetas de Crédito</div>
+                            <div class="tab" data-tab="debit">Tarjetas de Débito</div>
                         </div>
-                        <div class="message tamagochi-message">
-                            <div class="message-sender">FinanziPet</div>
-                            <div class="message-content">Recuerda que tienes un pago pendiente en tu tarjeta de crédito. ¿Quieres que te ayude a programarlo?</div>
-                        </div>
-                        <div class="message user-message">
-                            <div class="message-sender">Tú</div>
-                            <div class="message-content">Sí, por favor. ¿Cuándo vence exactamente?</div>
-                        </div>
-                        <div class="message tamagochi-message">
-                            <div class="message-sender">FinanziPet</div>
-                            <div class="message-content">El pago vence en 5 días. Te recomiendo programarlo para mañana para evitar cargos por mora.</div>
-                        </div>
-                    </div>
-                    <div class="chat-input">
-                        <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
-                        <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Panel derecho - Tarjetas e Insignias -->
-            <div class="right-panel">
-                <!-- Sección de Tarjetas -->
-                <div class="cards-section">
-                    <h3 class="section-title">Mis Tarjetas</h3>
-                    <div class="cards-tabs">
-                        <div class="tab active" data-tab="credit">Tarjetas de Crédito</div>
-                        <div class="tab" data-tab="debit">Tarjetas de Débito</div>
-                    </div>
-                    
-                    <!-- Tarjetas de Crédito -->
-                    <div class="cards-slider" id="creditCards">
-                        <div class="card" data-card="1">
-                            <div class="card-header">
-                                <div class="card-type">Crédito</div>
-                                <div class="card-chip"></div>
-                            </div>
-                            <div class="card-number">**** **** **** 4512</div>
-                            <div class="card-footer">
-                                <div class="card-holder">JUAN PÉREZ</div>
-                                <div class="card-expiry">09/25</div>
-                            </div>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Límite:</span>
-                                    <span>$15,000.00</span>
+                        <!-- Tarjetas de Crédito -->
+                        <div class="cards-slider" id="creditCards">
+                            <div class="card" data-card="1">
+                                <div class="card-header">
+                                    <div class="card-type">Crédito</div>
+                                    <div class="card-chip"></div>
                                 </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Disponible:</span>
-                                    <span>$8,450.00</span>
+                                <div class="card-number">**** **** **** 4512</div>
+                                <div class="card-footer">
+                                    <div class="card-holder">JUAN PÉREZ</div>
+                                    <div class="card-expiry">09/25</div>
                                 </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Próximo pago:</span>
-                                    <span>15/09/2023</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Monto a pagar:</span>
-                                    <span>$1,250.00</span>
+                                <div class="card-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Límite:</span>
+                                        <span>$15,000.00</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Disponible:</span>
+                                        <span>$8,450.00</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Próximo pago:</span>
+                                        <span>15/09/2023</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Monto a pagar:</span>
+                                        <span>$1,250.00</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="card" data-card="2">
-                            <div class="card-header">
-                                <div class="card-type">Crédito</div>
-                                <div class="card-chip"></div>
-                            </div>
-                            <div class="card-number">**** **** **** 7821</div>
-                            <div class="card-footer">
-                                <div class="card-holder">JUAN PÉREZ</div>
-                                <div class="card-expiry">11/24</div>
-                            </div>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Límite:</span>
-                                    <span>$10,000.00</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Disponible:</span>
-                                    <span>$6,200.00</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Próximo pago:</span>
-                                    <span>22/09/2023</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Monto a pagar:</span>
-                                    <span>$850.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Tarjetas de Débito -->
-                    <div class="cards-slider" id="debitCards" style="display: none;">
-                        <div class="card" data-card="3">
-                            <div class="card-header">
-                                <div class="card-type">Débito</div>
-                                <div class="card-chip"></div>
-                            </div>
-                            <div class="card-number">**** **** **** 6394</div>
-                            <div class="card-footer">
-                                <div class="card-holder">JUAN PÉREZ</div>
-                                <div class="card-expiry">--/--</div>
-                            </div>
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Saldo actual:</span>
-                                    <span>$5,430.00</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Última transacción:</span>
-                                    <span>03/09/2023</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Estado:</span>
-                                    <span>Activa</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Sección de Insignias -->
-                <div class="badges-section">
-                    <h3 class="section-title">Mis Logros</h3>
-                    <div class="badges-container">
-                        <div class="badge earned">
-                            <div class="badge-icon"><i class="fas fa-piggy-bank"></i></div>
-                            <div class="badge-name">Ahorrador Novato</div>
-                        </div>
-                        <div class="badge earned">
-                            <div class="badge-icon"><i class="fas fa-chart-line"></i></div>
-                            <div class="badge-name">Inversor Principiante</div>
-                        </div>
-                        <div class="badge">
-                            <div class="badge-icon"><i class="fas fa-crown"></i></div>
-                            <div class="badge-name">Rey del Presupuesto</div>
-                            <div class="badge-progress">
-                                <div class="badge-progress-fill" style="width: 65%"></div>
+                            <div class="card" data-card="2">
+                                <div class="card-header">
+                                    <div class="card-type">Crédito</div>
+                                    <div class="card-chip"></div>
+                                </div>
+                                <div class="card-number">**** **** **** 7821</div>
+                                <div class="card-footer">
+                                    <div class="card-holder">JUAN PÉREZ</div>
+                                    <div class="card-expiry">11/24</div>
+                                </div>
+                                <div class="card-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Límite:</span>
+                                        <span>$10,000.00</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Disponible:</span>
+                                        <span>$6,200.00</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Próximo pago:</span>
+                                        <span>22/09/2023</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Monto a pagar:</span>
+                                        <span>$850.00</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="badge">
-                            <div class="badge-icon"><i class="fas fa-rocket"></i></div>
-                            <div class="badge-name">Finanzas Espaciales</div>
-                            <div class="badge-progress">
-                                <div class="badge-progress-fill" style="width: 30%"></div>
+
+                        <!-- Tarjetas de Débito -->
+                        <div class="cards-slider" id="debitCards" style="display: none;">
+                            <div class="card" data-card="3">
+                                <div class="card-header">
+                                    <div class="card-type">Débito</div>
+                                    <div class="card-chip"></div>
+                                </div>
+                                <div class="card-number">**** **** **** 6394</div>
+                                <div class="card-footer">
+                                    <div class="card-holder">JUAN PÉREZ</div>
+                                    <div class="card-expiry">--/--</div>
+                                </div>
+                                <div class="card-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Saldo actual:</span>
+                                        <span>$5,430.00</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Última transacción:</span>
+                                        <span>03/09/2023</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Estado:</span>
+                                        <span>Activa</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="badge earned">
-                            <div class="badge-icon"><i class="fas fa-calendar-check"></i></div>
-                            <div class="badge-name">Puntualidad Financiera</div>
-                        </div>
-                        <div class="badge">
-                            <div class="badge-icon"><i class="fas fa-gem"></i></div>
-                            <div class="badge-name">Diamante Financiero</div>
-                            <div class="badge-progress">
-                                <div class="badge-progress-fill" style="width: 80%"></div>
+                    </div>
+
+                    <!-- Sección de Insignias -->
+                    <div class="badges-section">
+                        <h3 class="section-title">Mis Logros</h3>
+                        <div class="badges-container">
+                            <div class="badge earned">
+                                <div class="badge-icon"><i class="fas fa-piggy-bank"></i></div>
+                                <div class="badge-name">Ahorrador Novato</div>
+                            </div>
+                            <div class="badge earned">
+                                <div class="badge-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="badge-name">Inversor Principiante</div>
+                            </div>
+                            <div class="badge">
+                                <div class="badge-icon"><i class="fas fa-crown"></i></div>
+                                <div class="badge-name">Rey del Presupuesto</div>
+                                <div class="badge-progress">
+                                    <div class="badge-progress-fill" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="badge">
+                                <div class="badge-icon"><i class="fas fa-rocket"></i></div>
+                                <div class="badge-name">Finanzas Espaciales</div>
+                                <div class="badge-progress">
+                                    <div class="badge-progress-fill" style="width: 30%"></div>
+                                </div>
+                            </div>
+                            <div class="badge earned">
+                                <div class="badge-icon"><i class="fas fa-calendar-check"></i></div>
+                                <div class="badge-name">Puntualidad Financiera</div>
+                            </div>
+                            <div class="badge">
+                                <div class="badge-icon"><i class="fas fa-gem"></i></div>
+                                <div class="badge-name">Diamante Financiero</div>
+                                <div class="badge-progress">
+                                    <div class="badge-progress-fill" style="width: 80%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
         // Inicializar partículas
         particlesJS("particles-js", {
             particles: {
@@ -1039,14 +1039,14 @@
                 document.querySelectorAll('.tab').forEach(t => {
                     t.classList.remove('active');
                 });
-                
+
                 // Agregar clase active a la pestaña clickeada
                 this.classList.add('active');
-                
+
                 // Ocultar todos los sliders
                 document.getElementById('creditCards').style.display = 'none';
                 document.getElementById('debitCards').style.display = 'none';
-                
+
                 // Mostrar el slider correspondiente
                 const tabType = this.getAttribute('data-tab');
                 if (tabType === 'credit') {
@@ -1066,7 +1066,7 @@
                         detail.classList.remove('active');
                     }
                 });
-                
+
                 // Alternar detalles de esta tarjeta
                 const details = this.querySelector('.card-details');
                 details.classList.toggle('active');
@@ -1084,25 +1084,25 @@
         function sendMessage() {
             const input = document.getElementById('chatInput');
             const message = input.value.trim();
-            
+
             if (message === '') return;
-            
+
             // Agregar mensaje del usuario
             const chatMessages = document.getElementById('chatMessages');
             const userMessage = document.createElement('div');
             userMessage.className = 'message user-message';
             userMessage.innerHTML = `
-                <div class="message-sender">Tú</div>
-                <div class="message-content">${message}</div>
-            `;
+<div class="message-sender">Tú</div>
+<div class="message-content">${message}</div>
+`;
             chatMessages.appendChild(userMessage);
-            
+
             // Limpiar input
             input.value = '';
-            
+
             // Scroll al final
             chatMessages.scrollTop = chatMessages.scrollHeight;
-            
+
             // Respuesta automática del FinanziPet después de un breve retraso
             setTimeout(() => {
                 const responses = [
@@ -1112,17 +1112,17 @@
                     "¡Excelente pregunta! Déjame analizar tus datos para darte la mejor respuesta.",
                     "He notado que tu salud financiera ha mejorado. ¡Sigue así!"
                 ];
-                
+
                 const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                
+
                 const tamagochiMessage = document.createElement('div');
                 tamagochiMessage.className = 'message tamagochi-message';
                 tamagochiMessage.innerHTML = `
-                    <div class="message-sender">FinanziPet</div>
-                    <div class="message-content">${randomResponse}</div>
-                `;
+<div class="message-sender">FinanziPet</div>
+<div class="message-content">${randomResponse}</div>
+`;
                 chatMessages.appendChild(tamagochiMessage);
-                
+
                 // Scroll al final
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }, 1000);
@@ -1134,6 +1134,6 @@
             mouth.style.height = Math.random() > 0.5 ? '12px' : '18px';
             mouth.style.borderRadius = Math.random() > 0.5 ? '0 0 15px 15px' : '15px';
         }, 3000);
-    </script>
-</body>
+        </script>
+    </body>
 </html>
