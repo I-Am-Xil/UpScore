@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinanziPet - Revoluciona Tu Salud Financiera</title>
+    <title>UpScore</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Variables de colores y estilos */
@@ -725,7 +725,7 @@
             <nav>
                 <a href="#" class="logo">
                     <i class="fas fa-dragon"></i>
-                    FinanziPet
+                    UpScore
                 </a>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
@@ -734,7 +734,7 @@
                     <li><a href="#precios">Precios</a></li>
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
-                <button class="cta-button">Descargar Ahora</button>
+                <button class="cta-button" id="loginBtn">Iniciar Sesión</button>
             </nav>
         </div>
     </header>
@@ -747,8 +747,8 @@
                     <h1>Revoluciona Tu Salud Financiera Con FinanziPet</h1>
                     <p>La primera mascota digital que crece y evoluciona según tus decisiones financieras. Conecta tus cuentas, establece metas y mira cómo tu FinanziPet prospera junto a tu economía.</p>
                     <div class="hero-buttons">
-                        <button class="cta-button">Comenzar Gratis</button>
-                        <button class="secondary-button">Ver Demo</button>
+                        <button class="cta-button" id="startFreeBtn">Comenzar Gratis</button>
+                        <button class="secondary-button" id="demoBtn">Ver Demo</button>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -837,7 +837,7 @@
             <div class="cta-content">
                 <h2>¡Únete a la Revolución Financiera!</h2>
                 <p>Descarga FinanziPet hoy mismo y recibe 30 días gratis de todas las funciones premium. Transforma tu economía mientras crías la mascota más inteligente del mundo financiero.</p>
-                <button class="cta-button cta-large">Comenzar Mi Experiencia</button>
+                <button class="cta-button cta-large" id="ctaBtn">Comenzar Mi Experiencia</button>
             </div>
         </div>
     </section>
@@ -986,6 +986,24 @@
             mouth.style.height = Math.random() > 0.5 ? '20px' : '25px';
             mouth.style.borderRadius = Math.random() > 0.5 ? '0 0 25px 25px' : '25px';
         }, 3000);
+
+        // Funcionalidad para redireccionar botones - RUTAS CORREGIDAS
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Cambia por la ruta correcta
+        });
+
+        document.getElementById('startFreeBtn').addEventListener('click', function() {
+            window.location.href = 'registro.html'; // Cambia por la ruta correcta
+        });
+
+        document.getElementById('demoBtn').addEventListener('click', function() {
+            window.location.href = 'demo.html'; // Cambia por la ruta correcta
+        });
+
+        document.getElementById('ctaBtn').addEventListener('click', function() {
+            window.location.href = 'registro.html'; // Cambia por la ruta correcta
+        });
     </script>
+    
 </body>
 </html>
