@@ -1,50 +1,1139 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link rel="icon" href="{{ url_for('static', filename='bank.ico')}}" type="image/x-icon">
-        <title>Home</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - FinanziPet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-    .btn-outline-danger{
-        border-width: 2px;
-        color: black;
-    }
+        /* Variables de colores y estilos */
+        :root {
+            --primary: #6c5ce7;
+            --primary-light: #a29bfe;
+            --secondary: #00cec9;
+            --accent: #fd79a8;
+            --dark: #0a0e17;
+            --darker: #05070f;
+            --light: #ffffff;
+            --gray: #b2bec3;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            --gradient-dark: linear-gradient(135deg, var(--darker), var(--dark));
+        }
+
+        /* Reset y estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Efectos de partículas */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Menú de navegación - CORREGIDO */
+        header {
+            background: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(15px);
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+            position: relative; /* Añadido para contexto de z-index */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            position: relative; /* Añadido para contexto de z-index */
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative; /* Añadido para contexto de z-index */
+        }
+
+        .notification-icon, .user-menu {
+            position: relative;
+            cursor: pointer;
+            z-index: 1001; /* Aseguramos que estén por encima */
+        }
+
+        .notification-icon i, .user-menu i {
+            font-size: 24px;
+            color: var(--light);
+            transition: color 0.3s;
+        }
+
+        .notification-icon:hover i, .user-menu:hover i {
+            color: var(--primary-light);
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Dropdowns corregidos */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(10, 14, 23, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(108, 92, 231, 0.5);
+            width: 300px;
+            padding: 20px;
+            z-index: 1002; /* Mayor z-index para estar por encima de todo */
+            display: none;
+            margin-top: 10px;
+        }
+
+        .notification-dropdown {
+            width: 350px;
+            right: -10px;
+        }
+
+        .dropdown.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dropdown-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--light);
+            border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .notification-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+
+        .notification-content {
+            font-size: 14px;
+        }
+
+        .notification-time {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        .user-dropdown {
+            width: 200px;
+            right: 0;
+        }
+
+        .user-dropdown a {
+            display: block;
+            color: var(--light);
+            text-decoration: none;
+            padding: 10px 0;
+            transition: color 0.3s;
+        }
+
+        .user-dropdown a:hover {
+            color: var(--primary-light);
+        }
+
+        .user-dropdown a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            display: flex;
+            padding: 40px 0;
+            gap: 30px;
+            position: relative;
+            z-index: 1; /* Menor que los dropdowns */
+        }
+
+        /* Panel izquierdo - Tamagochi y Chat */
+        .left-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .tamagochi-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+        }
+
+        .tamagochi-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tamagochi-title {
+            font-size: 24px;
+            color: var(--light);
+        }
+
+        .health-score {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .score-value {
+            font-size: 28px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .score-label {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .tamagochi-container {
+            width: 200px;
+            height: 250px;
+            margin: 0 auto;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(108, 92, 231, 0.5));
+        }
+
+        .tamagochi-body {
+            width: 160px;
+            height: 200px;
+            background: var(--gradient);
+            border-radius: 80px 80px 100px 100px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.5), 
+                        inset 0 -10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .tamagochi-face {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 80px;
+        }
+
+        .tamagochi-eyes {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .tamagochi-eye {
+            width: 20px;
+            height: 30px;
+            background-color: var(--darker);
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: blink 4s infinite;
+        }
+
+        .tamagochi-eye::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: var(--light);
+            border-radius: 50%;
+            top: 6px;
+            left: 3px;
+        }
+
+        .tamagochi-mouth {
+            width: 30px;
+            height: 15px;
+            border-bottom: 4px solid var(--darker);
+            border-radius: 0 0 15px 15px;
+            margin: 0 auto;
+            transition: all 0.5s;
+        }
+
+        .tamagochi-screen {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 60px;
+            background-color: var(--darker);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: inset 0 0 15px rgba(0, 206, 201, 0.3);
+            padding: 8px;
+            text-align: center;
+        }
+
+        .health-bar {
+            width: 80%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        .health-fill {
+            height: 100%;
+            width: 85%;
+            background: var(--gradient);
+            border-radius: 3px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+
+        @keyframes blink {
+            0%, 90%, 100% { transform: scaleY(1); }
+            95% { transform: scaleY(0.1); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        /* Chat con Tamagochi */
+        .chat-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+        }
+
+        .chat-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 80%;
+            animation: messageAppear 0.3s ease;
+        }
+
+        @keyframes messageAppear {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tamagochi-message {
+            background: rgba(108, 92, 231, 0.2);
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background: rgba(0, 206, 201, 0.2);
+            border: 1px solid rgba(0, 206, 201, 0.3);
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .message-sender {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .message-content {
+            font-size: 14px;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            border-radius: 50px;
+            color: var(--light);
+            font-size: 14px;
+        }
+
+        .chat-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .chat-input button {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .chat-input button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Panel derecho - Tarjetas e Insignias */
+        .right-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .cards-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+
+        .cards-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            border-radius: 50px;
+            color: var(--light);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: var(--gradient);
+            border-color: transparent;
+        }
+
+        .cards-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 10px 5px;
+        }
+
+        .card {
+            min-width: 280px;
+            background: var(--gradient);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-type {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .card-chip {
+            width: 40px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        .card-number {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-holder {
+            font-size: 14px;
+        }
+
+        .card-expiry {
+            font-size: 14px;
+        }
+
+        .card-details {
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            display: none;
+        }
+
+        .card-details.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-label {
+            opacity: 0.7;
+        }
+
+        /* Sección de Insignias */
+        .badges-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+        }
+
+        .badges-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid rgba(108, 92, 231, 0.2);
+        }
+
+        .badge.earned {
+            background: rgba(108, 92, 231, 0.2);
+            border-color: var(--primary);
+        }
+
+        .badge:hover {
+            transform: scale(1.05);
+        }
+
+        .badge-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .badge.earned .badge-icon {
+            -webkit-text-fill-color: initial;
+            color: var(--secondary);
+        }
+
+        .badge-name {
+            font-size: 12px;
+            color: var(--light);
+        }
+
+        .badge.earned .badge-name {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .badge-progress {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .badge-progress-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards-slider {
+                flex-direction: column;
+            }
+            
+            .card {
+                min-width: auto;
+            }
+            
+            .dropdown {
+                width: 280px;
+            }
+            
+            .notification-dropdown {
+                width: 300px;
+            }
+        }
     </style>
-    <body>
-        <div class="container p-4 ">
-            <h2 class="text-center">Bienvenido, {{ current_user.username }}</h2>
-            <p class="text-center">Estás autenticado.</p>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-outline-danger d-flex align-items-center" type="button">
-                    <i class="fas fa-gift me-2"></i> Mis beneficios
-                </button>
-                <button class="btn btn-outline-danger d-flex align-items-center" type="button">
-                    <i class="fas fa-hand-holding-usd me-2"></i> Fondos de inversión
-                </button>
-                <button class="btn btn-outline-danger d-flex align-items-center" type="button">
-                    <i class="fas fa-hand-holding-usd me-2"></i> Dinero Creciente
-                </button>
-                <button class="btn btn-outline-danger d-flex align-items-center" type="button">
-                    <i class="fas fa-hand-holding-usd me-2"></i> Mis metas
-                </button>
-                <button class="btn btn-outline-danger d-flex align-items-center" type="button">
-                    <i class="fas fa-hand-holding-usd me-2"></i> Inversion a plazo
-                </button>
-                <button class="btn btn-outline-danger d-flex align-items-center" type="button">
-                    <i class="fas fa-hand-holding-usd me-2"></i> Creditos
-                </button>
+</head>
+<body>
+    <!-- Efecto de partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Menú de navegación -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dragon"></i>
+                    FinanziPet
+                </a>
+                <div class="nav-right">
+                    <div class="notification-icon" id="notificationIcon">
+                        <i class="fas fa-bell"></i>
+                        <div class="notification-badge">3</div>
+                        <div class="dropdown notification-dropdown">
+                            <div class="dropdown-title">Notificaciones</div>
+                            <div class="notification-item">
+                                <div class="notification-content">Tu tarjeta de crédito tiene un pago pendiente</div>
+                                <div class="notification-time">Hace 2 horas</div>
+                            </div>
+                            <div class="notification-item">
+                                <div class="notification-content">¡Felicidades! Has alcanzado un nuevo logro</div>
+                                <div class="notification-time">Ayer</div>
+                            </div>
+                            <div class="notification-item">
+                                <div class="notification-content">Tu FinanziPet ha evolucionado</div>
+                                <div class="notification-time">Hace 3 días</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-menu" id="userMenu">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="dropdown user-dropdown">
+                            <a href="#"><i class="fas fa-user"></i> Mi Perfil</a>
+                            <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                            <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
+                            <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Panel izquierdo - Tamagochi y Chat -->
+            <div class="left-panel">
+                <!-- Tarjeta del Tamagochi -->
+                <div class="tamagochi-card">
+                    <div class="tamagochi-header">
+                        <h2 class="tamagochi-title">Mi FinanziPet</h2>
+                        <div class="health-score">
+                            <div class="score-value">85%</div>
+                            <div class="score-label">Salud Financiera</div>
+                        </div>
+                    </div>
+                    <div class="tamagochi-container">
+                        <div class="tamagochi-body">
+                            <div class="tamagochi-face">
+                                <div class="tamagochi-eyes">
+                                    <div class="tamagochi-eye"></div>
+                                    <div class="tamagochi-eye"></div>
+                                </div>
+                                <div class="tamagochi-mouth"></div>
+                            </div>
+                            <div class="tamagochi-screen">
+                                ¡Hola! ¿Cómo estás?
+                                <div class="health-bar">
+                                    <div class="health-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat con el Tamagochi -->
+                <div class="chat-container">
+                    <h3 class="chat-title">Chat con FinanziPet</h3>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message tamagochi-message">
+                            <div class="message-sender">FinanziPet</div>
+                            <div class="message-content">¡Hola! Veo que tu salud financiera está en 85%. ¡Buen trabajo!</div>
+                        </div>
+                        <div class="message tamagochi-message">
+                            <div class="message-sender">FinanziPet</div>
+                            <div class="message-content">Recuerda que tienes un pago pendiente en tu tarjeta de crédito. ¿Quieres que te ayude a programarlo?</div>
+                        </div>
+                        <div class="message user-message">
+                            <div class="message-sender">Tú</div>
+                            <div class="message-content">Sí, por favor. ¿Cuándo vence exactamente?</div>
+                        </div>
+                        <div class="message tamagochi-message">
+                            <div class="message-sender">FinanziPet</div>
+                            <div class="message-content">El pago vence en 5 días. Te recomiendo programarlo para mañana para evitar cargos por mora.</div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+                        <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
             </div>
-            <div class="text-center p-2">
-                <a href="{{ url_for('auth.logout') }}" class="w-50 btn btn-warning d-inline-block">Cerrar sesión</a>
+
+            <!-- Panel derecho - Tarjetas e Insignias -->
+            <div class="right-panel">
+                <!-- Sección de Tarjetas -->
+                <div class="cards-section">
+                    <h3 class="section-title">Mis Tarjetas</h3>
+                    <div class="cards-tabs">
+                        <div class="tab active" data-tab="credit">Tarjetas de Crédito</div>
+                        <div class="tab" data-tab="debit">Tarjetas de Débito</div>
+                    </div>
+                    
+                    <!-- Tarjetas de Crédito -->
+                    <div class="cards-slider" id="creditCards">
+                        <div class="card" data-card="1">
+                            <div class="card-header">
+                                <div class="card-type">Crédito</div>
+                                <div class="card-chip"></div>
+                            </div>
+                            <div class="card-number">**** **** **** 4512</div>
+                            <div class="card-footer">
+                                <div class="card-holder">JUAN PÉREZ</div>
+                                <div class="card-expiry">09/25</div>
+                            </div>
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Límite:</span>
+                                    <span>$15,000.00</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Disponible:</span>
+                                    <span>$8,450.00</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Próximo pago:</span>
+                                    <span>15/09/2023</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Monto a pagar:</span>
+                                    <span>$1,250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card" data-card="2">
+                            <div class="card-header">
+                                <div class="card-type">Crédito</div>
+                                <div class="card-chip"></div>
+                            </div>
+                            <div class="card-number">**** **** **** 7821</div>
+                            <div class="card-footer">
+                                <div class="card-holder">JUAN PÉREZ</div>
+                                <div class="card-expiry">11/24</div>
+                            </div>
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Límite:</span>
+                                    <span>$10,000.00</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Disponible:</span>
+                                    <span>$6,200.00</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Próximo pago:</span>
+                                    <span>22/09/2023</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Monto a pagar:</span>
+                                    <span>$850.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjetas de Débito -->
+                    <div class="cards-slider" id="debitCards" style="display: none;">
+                        <div class="card" data-card="3">
+                            <div class="card-header">
+                                <div class="card-type">Débito</div>
+                                <div class="card-chip"></div>
+                            </div>
+                            <div class="card-number">**** **** **** 6394</div>
+                            <div class="card-footer">
+                                <div class="card-holder">JUAN PÉREZ</div>
+                                <div class="card-expiry">--/--</div>
+                            </div>
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Saldo actual:</span>
+                                    <span>$5,430.00</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Última transacción:</span>
+                                    <span>03/09/2023</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Estado:</span>
+                                    <span>Activa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Insignias -->
+                <div class="badges-section">
+                    <h3 class="section-title">Mis Logros</h3>
+                    <div class="badges-container">
+                        <div class="badge earned">
+                            <div class="badge-icon"><i class="fas fa-piggy-bank"></i></div>
+                            <div class="badge-name">Ahorrador Novato</div>
+                        </div>
+                        <div class="badge earned">
+                            <div class="badge-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="badge-name">Inversor Principiante</div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon"><i class="fas fa-crown"></i></div>
+                            <div class="badge-name">Rey del Presupuesto</div>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon"><i class="fas fa-rocket"></i></div>
+                            <div class="badge-name">Finanzas Espaciales</div>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="badge earned">
+                            <div class="badge-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div class="badge-name">Puntualidad Financiera</div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon"><i class="fas fa-gem"></i></div>
+                            <div class="badge-name">Diamante Financiero</div>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Bootstrap -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Inicializar partículas
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#6c5ce7" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#6c5ce7",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            }
+        });
+
+        // Menús desplegables
+        document.getElementById('notificationIcon').addEventListener('click', function(e) {
+            e.stopPropagation();
+            const dropdown = this.querySelector('.dropdown');
+            dropdown.classList.toggle('active');
+        });
+
+        document.getElementById('userMenu').addEventListener('click', function(e) {
+            e.stopPropagation();
+            const dropdown = this.querySelector('.dropdown');
+            dropdown.classList.toggle('active');
+        });
+
+        // Cerrar menús al hacer clic fuera
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        });
+
+        // Tabs de tarjetas
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remover clase active de todas las pestañas
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Agregar clase active a la pestaña clickeada
+                this.classList.add('active');
+                
+                // Ocultar todos los sliders
+                document.getElementById('creditCards').style.display = 'none';
+                document.getElementById('debitCards').style.display = 'none';
+                
+                // Mostrar el slider correspondiente
+                const tabType = this.getAttribute('data-tab');
+                if (tabType === 'credit') {
+                    document.getElementById('creditCards').style.display = 'flex';
+                } else if (tabType === 'debit') {
+                    document.getElementById('debitCards').style.display = 'flex';
+                }
+            });
+        });
+
+        // Mostrar detalles de tarjeta al hacer clic
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Cerrar otros detalles abiertos
+                document.querySelectorAll('.card-details').forEach(detail => {
+                    if (detail !== this.querySelector('.card-details')) {
+                        detail.classList.remove('active');
+                    }
+                });
+                
+                // Alternar detalles de esta tarjeta
+                const details = this.querySelector('.card-details');
+                details.classList.toggle('active');
+            });
+        });
+
+        // Chat con FinanziPet
+        document.getElementById('sendMessage').addEventListener('click', sendMessage);
+        document.getElementById('chatInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (message === '') return;
+            
+            // Agregar mensaje del usuario
+            const chatMessages = document.getElementById('chatMessages');
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user-message';
+            userMessage.innerHTML = `
+                <div class="message-sender">Tú</div>
+                <div class="message-content">${message}</div>
+            `;
+            chatMessages.appendChild(userMessage);
+            
+            // Limpiar input
+            input.value = '';
+            
+            // Scroll al final
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Respuesta automática del FinanziPet después de un breve retraso
+            setTimeout(() => {
+                const responses = [
+                    "¡Interesante! ¿Necesitas ayuda con algún aspecto específico de tus finanzas?",
+                    "Voy a revisar tu situación financiera y te daré recomendaciones personalizadas.",
+                    "Recuerda que puedes consultarme sobre tus tarjetas, presupuesto o metas de ahorro.",
+                    "¡Excelente pregunta! Déjame analizar tus datos para darte la mejor respuesta.",
+                    "He notado que tu salud financiera ha mejorado. ¡Sigue así!"
+                ];
+                
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                
+                const tamagochiMessage = document.createElement('div');
+                tamagochiMessage.className = 'message tamagochi-message';
+                tamagochiMessage.innerHTML = `
+                    <div class="message-sender">FinanziPet</div>
+                    <div class="message-content">${randomResponse}</div>
+                `;
+                chatMessages.appendChild(tamagochiMessage);
+                
+                // Scroll al final
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+
+        // Animación de la boca del tamagochi
+        const mouth = document.querySelector('.tamagochi-mouth');
+        setInterval(() => {
+            mouth.style.height = Math.random() > 0.5 ? '12px' : '18px';
+            mouth.style.borderRadius = Math.random() > 0.5 ? '0 0 15px 15px' : '15px';
+        }, 3000);
+    </script>
+</body>
 </html>

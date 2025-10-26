@@ -11,4 +11,5 @@ def index():
 @start.route("/home")
 @login_required
 def home():
-    return render_template("home.html")
+    finScore = 100 
+    return render_template("home.html", finScore=str(finScore))
