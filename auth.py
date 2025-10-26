@@ -26,7 +26,7 @@ def login():
 @auth.route("/register", methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
-        return redirect(url_for('routes.home'))
+        return redirect(url_for('start.home'))
 
     if request.method == 'POST':
         username = request.form.get('username')
@@ -36,15 +36,15 @@ def register():
 
         if password != confirm_password:
             flash('Las contraseñas no coinciden', 'danger')
-            return redirect(url_for('routes.register'))
+            return redirect(url_for('auth.register'))
 
         if User.query.filter_by(username=username).first():
             flash('El nombre de usuario ya está en uso.', 'danger')
-            return redirect(url_for('routes.register'))
+            return redirect(url_for('auth.register'))
 
         if User.query.filter_by(email=email).first():
             flash('El correo electrónico ya está registrado.', 'danger')
-            return redirect(url_for('routes.register'))
+            return redirect(url_for('auth.register'))
 
         hashed_password = generate_password_hash(password)
         new_user = User(username=username, email=email, password=hashed_password)
