@@ -38,11 +38,23 @@ def write_customers_to_file(customers, filename='customers.json'):
     with open(filename, 'w') as f:
         json.dump(customers, f, indent=4)
 
+def get_purchases(api_url, headers):
+    try:
+        response = requests.get(api_url, headers=headers)
+        response.raise_for_status()  # Raise an error for bad status codes
+        purchases = response.json()
+        return purchases
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred: {e}")
+        return None
+
 def main():
 
     api_url_acc = "http://api.nessieisreal.com/accounts/?key={}".format(api_key)
     api_url_cust = "http://api.nessieisreal.com/customers/?key={}".format(api_key)
     
+    
+
 
     headers = {
         'Content-Type': 'application/json'
@@ -58,6 +70,9 @@ def main():
         print("Customers retrieved successfully:")
         write_customers_to_file(customers)
     
+    for i in range(len(accounts)):
+      if accounts:
+        print(accounts[i]['_ids'])
 
 
 

@@ -1,0 +1,211 @@
+[
+  {
+    "first_name": "Jane",
+    "last_name": "Smith",
+    "address": {
+      "street_number": "1234",
+      "street_name": "Maple Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90001"
+    }
+  },
+  {
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "address": {
+      "street_number": "4321",
+      "street_name": "Oak St",
+      "city": "San Diego",
+      "state": "CA",
+      "zip": "92101"
+    }
+  },
+  {
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "address": {
+      "street_number": "5678",
+      "street_name": "Pine Rd",
+      "city": "Sacramento",
+      "state": "CA",
+      "zip": "95814"
+    }
+  },
+  {
+    "first_name": "David",
+    "last_name": "Martinez",
+    "address": {
+      "street_number": "8765",
+      "street_name": "Cedar Ln",
+      "city": "Fresno",
+      "state": "CA",
+      "zip": "93722"
+    }
+  },
+  {
+    "first_name": "Sarah",
+    "last_name": "Lopez",
+    "address": {
+      "street_number": "3456",
+      "street_name": "Birch Blvd",
+      "city": "Bakersfield",
+      "state": "CA",
+      "zip": "93301"
+    }
+  },
+  {
+    "first_name": "Chris",
+    "last_name": "Wilson",
+    "address": {
+      "street_number": "7890",
+      "street_name": "Elm St",
+      "city": "Anaheim",
+      "state": "CA",
+      "zip": "92801"
+    }
+  },
+  {
+    "first_name": "Jessica",
+    "last_name": "Taylor",
+    "address": {
+      "street_number": "2345",
+      "street_name": "Spruce Ct",
+      "city": "Santa Ana",
+      "state": "CA",
+      "zip": "92701"
+    }
+  },
+  {
+    "first_name": "Matthew",
+    "last_name": "Anderson",
+    "address": {
+      "street_number": "6543",
+      "street_name": "Willow Dr",
+      "city": "Riverside",
+      "state": "CA",
+      "zip": "92501"
+    }
+  },
+  {
+    "first_name": "Ashley",
+    "last_name": "Thomas",
+    "address": {
+      "street_number": "9876",
+      "street_name": "Chestnut St",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90802"
+    }
+  },
+  {
+    "first_name": "Joshua",
+    "last_name": "Moore",
+    "address": {
+      "street_number": "3210",
+      "street_name": "Poplar Ave",
+      "city": "Glendale",
+      "state": "CA",
+      "zip": "91203"
+    }
+  },
+  {
+    "first_name": "Amanda",
+    "last_name": "Jackson",
+    "address": {
+      "street_number": "5432",
+      "street_name": "Magnolia St",
+      "city": "Irvine",
+      "state": "CA",
+      "zip": "92602"
+    }
+  },
+  {
+    "first_name": "Daniel",
+    "last_name": "White",
+    "address": {
+      "street_number": "8761",
+      "street_name": "Aspen Rd",
+      "city": "Chula Vista",
+      "state": "CA",
+      "zip": "91910"
+    }
+  },
+  {
+    "first_name": "Brittany",
+    "last_name": "Harris",
+    "address": {
+      "street_number": "2109",
+      "street_name": "Dogwood Ln",
+      "city": "Oxnard",
+      "state": "CA",
+      "zip": "93030"
+    }
+  },
+  {
+    "first_name": "Andrew",
+    "last_name": "Martin",
+    "address": {
+      "street_number": "6549",
+      "street_name": "Fir St",
+      "city": "Fontana",
+      "state": "CA",
+      "zip": "92335"
+    }
+  },
+  {
+    "first_name": "Megan",
+    "last_name": "Thompson",
+    "address": {
+      "street_number": "7891",
+      "street_name": "Hickory Ave",
+      "city": "Moreno Valley",
+      "state": "CA",
+      "zip": "92553"
+    }
+  },
+  {
+    "first_name": "Ryan",
+    "last_name": "Garcia",
+    "address": {
+      "street_number": "2349",
+      "street_name": "Redwood Dr",
+      "city": "Huntington Beach",
+      "state": "CA",
+      "zip": "92647"
+    }
+  },
+  {
+    "first_name": "Lauren",
+    "last_name": "Martinez",
+    "address": {
+      "street_number": "5439",
+      "street_name": "Palm St",
+      "city": "Santa Clarita",
+      "state": "CA",
+      "zip": "91350"
+    }
+  },
+  {
+    "first_name": "Justin",
+    "last_name": "Clark",
+    "address": {
+      "street_number": "8763",
+      "street_name": "Sycamore Ave",
+      "city": "Garden Grove",
+      "state": "CA",
+      "zip": "92840"
+    }
+  },
+  {
+    "first_name": "Stephanie",
+    "last_name": "Lewis",
+    "address": {
+      "street_number": "2107",
+      "street_name": "Laurel Rd",
+      "city": "Oceanside",
+      "state": "CA",
+      "zip": "92054"
+    }
+  }
+]

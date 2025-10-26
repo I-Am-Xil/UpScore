@@ -1,0 +1,24 @@
+message,code,objectCreated.merchant_id,objectCreated.medium,objectCreated.purchase_date,objectCreated.amount,objectCreated.status,objectCreated.description,objectCreated.type,objectCreated.payer_id,objectCreated._id
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4758,balance,2025-10-21,2237,pending,Random Purchase,merchant,68fd297a9683f20dd51a472a,68fd397a9683f20dd51a479a
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4758,balance,2025-10-14,4449,pending,Random Purchase,merchant,68fd297a9683f20dd51a472a,68fd397b9683f20dd51a479c
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a475b,balance,2025-10-17,5089,pending,Random Purchase,merchant,68fd297a9683f20dd51a472d,68fd397d9683f20dd51a47a9
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4759,balance,2025-10-08,8207,pending,Random Purchase,merchant,68fd297a9683f20dd51a472d,68fd397d9683f20dd51a47ab
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4756,balance,2025-10-05,6436,pending,Random Purchase,merchant,68fd297a9683f20dd51a4730,68fd39809683f20dd51a47bb
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4758,balance,2025-10-13,3574,pending,Random Purchase,merchant,68fd297b9683f20dd51a4733,68fd39829683f20dd51a47ca
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4757,balance,2025-10-20,2672,pending,Random Purchase,merchant,68fd297b9683f20dd51a4734,68fd39839683f20dd51a47cc
+Created purchase and added it to the account,201,68fd2c5f9683f20dd51a475e,balance,2025-10-24,9687,pending,Random Purchase,merchant,68fd297b9683f20dd51a4734,68fd39839683f20dd51a47cd
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a475c,balance,2025-10-18,7346,pending,Random Purchase,merchant,68fd297b9683f20dd51a4734,68fd39839683f20dd51a47ce
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4757,balance,2025-10-07,5756,pending,Random Purchase,merchant,68fd297b9683f20dd51a4735,68fd39849683f20dd51a47d3
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4758,balance,2025-10-02,1012,pending,Random Purchase,merchant,68fd297c9683f20dd51a473b,68fd398b9683f20dd51a47ef
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a475c,balance,2025-10-11,1460,pending,Random Purchase,merchant,68fd297c9683f20dd51a473b,68fd398b9683f20dd51a47f2
+Created purchase and added it to the account,201,68fd2c5f9683f20dd51a475f,balance,2025-10-21,8524,pending,Random Purchase,merchant,68fd297c9683f20dd51a473c,68fd398c9683f20dd51a47f6
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a475b,balance,2025-10-10,4281,pending,Random Purchase,merchant,68fd297c9683f20dd51a473d,68fd398c9683f20dd51a47f9
+Created purchase and added it to the account,201,68fd2c5f9683f20dd51a475e,balance,2025-10-22,4702,pending,Random Purchase,merchant,68fd297c9683f20dd51a473d,68fd398d9683f20dd51a47fc
+Created purchase and added it to the account,201,68fd2c5f9683f20dd51a475e,balance,2025-10-05,9150,pending,Random Purchase,merchant,68fd297d9683f20dd51a473f,68fd398e9683f20dd51a4803
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4758,balance,2025-10-14,4254,pending,Random Purchase,merchant,68fd297d9683f20dd51a473f,68fd398f9683f20dd51a4805
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a475c,balance,2025-10-11,4323,pending,Random Purchase,merchant,68fd297d9683f20dd51a4740,68fd39909683f20dd51a480a
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4757,balance,2025-10-04,5811,pending,Random Purchase,merchant,68fd297d9683f20dd51a4743,68fd39939683f20dd51a4818
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4756,balance,2025-10-21,4250,pending,Random Purchase,merchant,68fd297d9683f20dd51a4744,68fd39949683f20dd51a481f
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4757,balance,2025-10-09,9041,pending,Random Purchase,merchant,68fd297e9683f20dd51a4746,68fd39969683f20dd51a4829
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a4759,balance,2025-10-18,4231,pending,Random Purchase,merchant,68fd297e9683f20dd51a4747,68fd39969683f20dd51a482c
+Created purchase and added it to the account,201,68fd2c5e9683f20dd51a475c,balance,2025-10-24,6739,pending,Random Purchase,merchant,68fd297e9683f20dd51a474b,68fd399a9683f20dd51a4841
