@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efecto de Lluvia con Login</title>
+    <title>UpScore - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -18,10 +19,91 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
             position: relative;
+        }
+
+        /* Variables de colores y estilos */
+        :root {
+            --primary: #6c5ce7;
+            --primary-light: #a29bfe;
+            --secondary: #00cec9;
+            --accent: #fd79a8;
+            --dark: #0a0e17;
+            --darker: #05070f;
+            --light: #ffffff;
+            --gray: #b2bec3;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            --gradient-dark: linear-gradient(135deg, var(--darker), var(--dark));
+        }
+
+        /* Menú de navegación */
+        header {
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(15px);
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+
+        .back-button {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--primary);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .back-button:hover {
+            background: rgba(108, 92, 231, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .back-button i {
+            margin-right: 8px;
         }
 
         /* Contenedor del efecto de lluvia */
@@ -35,7 +117,7 @@
         }
 
         /* From Uiverse.io by SelfMadeSystem */
-        .container {
+        .container-rain {
             position: relative;
             width: 100%;
             height: 100%;
@@ -118,7 +200,7 @@
             animation: rain 150s linear infinite;
         }
 
-        .container::after {
+        .container-rain::after {
             content: "";
             position: absolute;
             inset: 0;
@@ -217,7 +299,7 @@
         /* Controles para la lluvia */
         .rain-controls {
             position: fixed;
-            top: 20px;
+            top: 100px;
             left: 20px;
             z-index: 20;
             display: flex;
@@ -248,11 +330,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: calc(100vh - 80px);
             width: 100%;
             padding: 20px;
             position: relative;
             z-index: 10;
+            margin-top: 0px;
         }
 
         .login-box {
@@ -268,18 +351,18 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
-        .logo {
+        .logo-login {
             margin-bottom: 30px;
             text-align: center;
         }
 
-        .logo h1 {
+        .logo-login h1 {
             color: #f1f1f1;
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
-        .logo p {
+        .logo-login p {
             color: #aaa;
             font-size: 1rem;
         }
@@ -450,20 +533,20 @@
         }
 
         /* Variaciones de color para la lluvia */
-        .container.red-rain {
+        .container-rain.red-rain {
             --c: #f00;
         }
 
-        .container.green-rain {
+        .container-rain.green-rain {
             --c: #0f0;
         }
 
-        .container.purple-rain {
+        .container-rain.purple-rain {
             --c: #a0f;
         }
 
         /* Modo pausado */
-        .container.paused {
+        .container-rain.paused {
             animation-play-state: paused;
         }
 
@@ -479,22 +562,41 @@
                 gap: 15px;
             }
             
-            .logo h1 {
+            .logo-login h1 {
                 font-size: 2rem;
             }
             
             .rain-controls {
                 flex-direction: column;
-                top: 10px;
+                top: 90px;
                 left: 10px;
+            }
+            
+            .login-container {
+                margin-top: 70px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Menú de navegación -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="inicio.html" class="logo">
+                    <i class="fas fa-dragon"></i>
+                    UpScore
+                </a>
+                <a href="inicio.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Volver al Inicio
+                </a>
+            </nav>
+        </div>
+    </header>
+
     <!-- Efecto de lluvia en el fondo -->
     <div class="rain-container">
-        <div class="container" id="rainContainer"></div>
+        <div class="container-rain" id="rainContainer"></div>
     </div>
     
     <!-- Controles para la lluvia -->
@@ -508,7 +610,7 @@
     <!-- Formulario de login -->
     <div class="login-container">
         <div class="login-box">
-            <div class="logo">
+            <div class="logo-login">
                 <h1>Bienvenido</h1>
                 <p>Inicia sesión para continuar</p>
             </div>
@@ -531,7 +633,7 @@
                 </div>
                 <div class="inputForm">
                     <svg height="20" viewBox="-64 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0" fill="#f1f1f1"></path>
+                        <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875-48-48-48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0" fill="#f1f1f1"></path>
                         <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0" fill="#f1f1f1"></path>
                     </svg>
                     <input type="password" class="input" placeholder="Ingresa tu contraseña" />
@@ -573,7 +675,7 @@
             </form>
             
             <div class="footer">
-                <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+                <p>&copy; 2025 UpScore. Todos los derechos reservados. Revolucionando la salud financiera, una mascota a la vez.</p>
             </div>
         </div>
     </div>
