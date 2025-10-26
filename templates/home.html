@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo - FinanziPet</title>
+        <title>Demo - UpScore</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <style>
         /* Variables de colores y estilos */
@@ -731,7 +731,7 @@
                 <nav>
                     <a href="index.html" class="logo">
                         <i class="fas fa-dragon"></i>
-                        FinanziPet
+                        UpScore
                     </a>
                     <div class="nav-right">
                         <div class="notification-icon" id="notificationIcon">
@@ -748,7 +748,7 @@
                                     <div class="notification-time">Ayer</div>
                                 </div>
                                 <div class="notification-item">
-                                    <div class="notification-content">Tu FinanziPet ha evolucionado</div>
+                                    <div class="notification-content">Tu UpScore ha evolucionado</div>
                                     <div class="notification-time">Hace 3 días</div>
                                 </div>
                             </div>
@@ -758,7 +758,7 @@
                             <div class="dropdown user-dropdown">
                                 <a href="#"><i class="fas fa-user"></i> Mi Perfil</a>
                                 <a href="#"><i class="fas fa-cog"></i> Configuración</a>
-                                <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
+                                <a href="https://988lifeline.org/es/inicio/"><i class="fas fa-question-circle"></i> Ayuda</a>
                                 <a href="{{ url_for('auth.logout') }}"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                             </div>
                         </div>
@@ -775,9 +775,9 @@
                     <!-- Tarjeta del Tamagochi -->
                     <div class="tamagochi-card">
                         <div class="tamagochi-header">
-                            <h2 class="tamagochi-title">Mi FinanziPet</h2>
+                            <h2 class="tamagochi-title">Mi UpScore</h2>
                             <div class="health-score">
-                                <div class="score-value">85%</div>
+                                <div class="score-value">{{ finScore }}</div>
                                 <div class="score-label">Salud Financiera</div>
                             </div>
                         </div>
@@ -802,14 +802,14 @@
 
                     <!-- Chat con el Tamagochi -->
                     <div class="chat-container">
-                        <h3 class="chat-title">Chat con FinanziPet</h3>
+                        <h3 class="chat-title">Chat con UpScore</h3>
                         <div class="chat-messages" id="chatMessages">
                             <div class="message tamagochi-message">
-                                <div class="message-sender">FinanziPet</div>
+                                <div class="message-sender">UpScore</div>
                                 <div class="message-content">¡Hola! Veo que tu salud financiera está en 85%. ¡Buen trabajo!</div>
                             </div>
                             <div class="message tamagochi-message">
-                                <div class="message-sender">FinanziPet</div>
+                                <div class="message-sender">UpScore</div>
                                 <div class="message-content">Recuerda que tienes un pago pendiente en tu tarjeta de crédito. ¿Quieres que te ayude a programarlo?</div>
                             </div>
                             <div class="message user-message">
@@ -817,7 +817,7 @@
                                 <div class="message-content">Sí, por favor. ¿Cuándo vence exactamente?</div>
                             </div>
                             <div class="message tamagochi-message">
-                                <div class="message-sender">FinanziPet</div>
+                                <div class="message-sender">UpScore</div>
                                 <div class="message-content">El pago vence en 5 días. Te recomiendo programarlo para mañana para evitar cargos por mora.</div>
                             </div>
                         </div>
@@ -1073,7 +1073,7 @@
             });
         });
 
-        // Chat con FinanziPet
+        // Chat con UpScore
         document.getElementById('sendMessage').addEventListener('click', sendMessage);
         document.getElementById('chatInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
@@ -1103,7 +1103,7 @@
             // Scroll al final
             chatMessages.scrollTop = chatMessages.scrollHeight;
 
-            // Respuesta automática del FinanziPet después de un breve retraso
+            // Respuesta automática del UpScore después de un breve retraso
             setTimeout(() => {
                 const responses = [
                     "¡Interesante! ¿Necesitas ayuda con algún aspecto específico de tus finanzas?",
@@ -1118,7 +1118,7 @@
                 const tamagochiMessage = document.createElement('div');
                 tamagochiMessage.className = 'message tamagochi-message';
                 tamagochiMessage.innerHTML = `
-<div class="message-sender">FinanziPet</div>
+<div class="message-sender">UpScore</div>
 <div class="message-content">${randomResponse}</div>
 `;
                 chatMessages.appendChild(tamagochiMessage);
